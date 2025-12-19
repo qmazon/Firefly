@@ -18,6 +18,12 @@ const config = {
 <div class="relative w-full">
   <div id="waline"></div>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+  <style is:global>
+    :root {
+      --waline-theme-color: var(--primary) !important;
+	  --waline-active-color: var(--btn-card-bg-active) !important;
+    }
+  </style>
   <script type="module" is:inline define:vars={{ config }}>
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
     init(config);

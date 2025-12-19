@@ -2,11 +2,11 @@ import type { ProfileConfig } from "../types/config";
 
 export const profileConfig: ProfileConfig = {
 	// 头像
-	avatar: "/assets/images/avatar.webp",
+	avatar: "/assets/images/avatar.jpg",
 	// 名字
 	name: "雪纷飞",
 	// 个人签名
-	bio: "大漠沙如雪，燕山月似钩",
+	bio: "北风卷地白草折，胡天八月即飞雪",
 
 	// 链接配置
 	// 已经预装的图标集：fa6-brands，fa6-regular，fa6-solid，material-symbols，simple-icons
