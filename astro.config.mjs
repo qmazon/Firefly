@@ -32,6 +32,8 @@ import rehypeFigure from "./src/plugins/rehype-figure.mjs";
 
 import cloudflare from "@astrojs/cloudflare";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   site: siteConfig.site_url,
@@ -129,7 +131,7 @@ export default defineConfig({
       }),
       searchIndexer(),
       mdx(),
-	],
+    ],
 
   markdown: {
       remarkPlugins: [
@@ -185,7 +187,7 @@ export default defineConfig({
               },
           ],
       ],
-	},
+    },
 
   vite: {
       build: {
@@ -202,7 +204,7 @@ export default defineConfig({
               },
           },
       },
-	},
+    },
 
-  adapter: cloudflare(),
+  adapter: netlify(),
 });
