@@ -8,7 +8,7 @@ const SITE_LANG = "zh_CN";
 export const siteConfig: SiteConfig = {
 	title: "雪纷飞",
 	subtitle: "雪纷飞的博客",
-	site_url: "https://blog.snowy.de5.net",
+	site_url: "https://snowy.cc.cd",
 	description:
 		"真诚，友善，专业！",
 	keywords: [

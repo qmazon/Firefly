@@ -12,8 +12,8 @@ description: "与优秀的朋友们一起成长"
 ```yaml
 站点名称: 雪纷飞
 站点描述: 真诚，友善，专业！
-站点链接: https://snowy.de5.net/
-头像链接: https://snowy.de5.net/assets/images/avatar.jpg
+站点链接: https://snowy.cc.cd/
+头像链接: https://snowy.cc.cd/assets/images/avatar.jpg
 # 当然，使用您觉得合适的站点描述也是可以的！
 ```
 
