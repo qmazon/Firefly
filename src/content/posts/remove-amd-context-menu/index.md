@@ -5,7 +5,7 @@ description: 究竟是谁会去点这个P用没有的右键菜单啊？？？
 tags: [日常, 优化]
 category: 日常
 author: 雪纷飞
-draft: true
+draft: false
 updated: 2025-12-21
 published: 2025-12-21
 image: "amd-logo.avif"
