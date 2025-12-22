@@ -9,6 +9,7 @@ export const siteConfig: SiteConfig = {
 	title: "雪纷飞",
 	subtitle: "雪纷飞的博客",
 	site_url: "https://snowy.cc.cd",
+	raw_github_content: "https://raw.githubusercontent.com/Snowy117/Firefly",
 	description:
 		"真诚，友善，专业！",
 	keywords: [
@@ -141,11 +142,11 @@ export const siteConfig: SiteConfig = {
 					mobile: true, // 移动端显示横幅图片来源文本
 				},
 				text: {
-					desktop: "Wallpaper Engine", // 桌面端要显示的来源文本
+					desktop: "Bilibili - 龙族", // 桌面端要显示的来源文本
 					mobile: "Pixiv - KiraraShss", // 移动端要显示的来源文本
 				},
 				url: {
-					desktop: "https://steamcommunity.com/sharedfiles/filedetails/?id=3314492008", // 桌面端原始艺术品或艺术家页面的 URL 链接
+					desktop: "https://www.bilibili.com/video/BV1ziWneGEpx/", // 桌面端原始艺术品或艺术家页面的 URL 链接
 					mobile: "https://www.pixiv.net/users/42715864", // 移动端原始艺术品或艺术家页面的 URL 链接
 				},
 			},

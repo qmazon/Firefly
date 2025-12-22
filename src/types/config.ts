@@ -11,6 +11,7 @@ export type SiteConfig = {
 	title: string;
 	subtitle: string;
 	site_url: string;
+	raw_github_content?: string; // GitHub仓库地址，不要用`/`结尾
 	description?: string; // 网站描述，用于生成 <meta name="description">
 	keywords?: string[]; // 站点关键词，用于生成 <meta name="keywords">
 

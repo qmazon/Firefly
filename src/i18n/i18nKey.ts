@@ -42,6 +42,7 @@ enum I18nKey {
 
 	author = "author",
 	publishedAt = "publishedAt",
+	updatedAt = "updatedAt",
 	license = "license",
 	friends = "friends",
 	friendsDescription = "friendsDescription",
@@ -213,6 +214,9 @@ enum I18nKey {
 	calendarOctober = "calendarOctober",
 	calendarNovember = "calendarNovember",
 	calendarDecember = "calendarDecember",
+
+	// 源码
+	sourceCode = "sourceCode",
 }
 
 export default I18nKey;

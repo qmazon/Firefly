@@ -13,6 +13,11 @@
 - **GitHub**: [Snowy117](https://github.com/Snowy117)
 - **Email**: [snowflies@outlook.com](mailto:snowflies@outlook.com)
 
+## 这个博客
+
+本博客的源代码：
+::github{repo="Snowy117/Firefly"}
+
 ---
 
 *感谢你的来访！希望在这里能找到对你有用的内容！*

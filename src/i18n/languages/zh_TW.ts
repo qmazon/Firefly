@@ -49,7 +49,9 @@ export const zh_TW: Translation = {
 
 	[Key.author]: "作者",
 	[Key.publishedAt]: "發布於",
+	[Key.updatedAt]: "更新於",
 	[Key.license]: "許可協議",
+	[Key.sourceCode]: "查看源碼",
 	[Key.bangumi]: "番組計劃",
 
 	// 番組計劃

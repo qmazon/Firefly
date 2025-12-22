@@ -1,3 +1,10 @@
+博文在`/src/content/posts`目录下。
+
+注意！MIT协议只是原始仓库的开源协议！每篇博文的许可协议以博客上展示的为准！
+
+下面是原始仓库的ReadMe。
+
+---
 
 <img src="./docs/images/1131.png" width = "405" height = "511" alt="Firefly" align=right />
 

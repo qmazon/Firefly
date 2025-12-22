@@ -126,6 +126,21 @@ const jsonLd = {
             }
           </div>
         </div>
+
+      {
+        siteConfig.raw_github_content && (
+          <div class="flex items-center ml-auto">
+            <a
+              href={`${siteConfig.raw_github_content}/refs/heads/master/src/content/posts/${entry.id}/index.md`}
+              target="_blank"
+              class="link-lg transition text-50 text-sm font-medium
+                    hover:text-[var(--primary)] dark:hover:text-[var(--primary)] whitespace-nowrap"
+            >
+              {i18n(I18nKey.sourceCode)}
+            </a>
+          </div>
+        )
+      }
       </div>
 
       <!-- title -->
@@ -178,6 +193,16 @@ const jsonLd = {
         )
       }
 
+      {
+        entry.data.description && (
+          <Markdown class="mb-6 markdown-content onload-animation">
+            <blockquote>
+              <p>{entry.data.description}</p>
+            </blockquote>
+          </Markdown>
+        )
+      }
+
       <Markdown class="mb-6 markdown-content onload-animation">
         <Content />
       </Markdown>
@@ -220,6 +245,7 @@ const jsonLd = {
             title={entry.data.title}
             id={entry.id}
             pubDate={entry.data.published}
+            editDate={entry.data.updated}
             author={entry.data.author}
             sourceLink={entry.data.sourceLink}
             licenseName={entry.data.licenseName}
@@ -232,7 +258,7 @@ const jsonLd = {
   </div>
 
   <!-- 上次编辑时间 -->
-  {
+  <!-- {
     siteConfig.showLastModified && (
       <div class="card-base p-6 mb-4">
         <div class="flex items-center gap-2">
@@ -272,7 +298,10 @@ const jsonLd = {
         </div>
       </div>
     )
-  }
+  } -->
+
+  <!-- 评论 -->
+  <Comment post={entry} />
 
   <div
     class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full"
@@ -321,7 +350,4 @@ const jsonLd = {
       }
     </a>
   </div>
-
-  <!-- 评论 -->
-  <Comment post={entry} />
 </MainGridLayout>

@@ -51,7 +51,9 @@ export const ja: Translation = {
 
 	[Key.author]: "著者",
 	[Key.publishedAt]: "公開日",
+	[Key.updatedAt]: "更新日",
 	[Key.license]: "ライセンス",
+	[Key.sourceCode]: "ソースコードを表示",
 	[Key.bangumi]: "バングミ",
 
 	// バングミフィルターと状態文本

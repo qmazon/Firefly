@@ -51,7 +51,9 @@ export const ru: Translation = {
 
 	[Key.author]: "Автор",
 	[Key.publishedAt]: "Опубликовано",
+	[Key.updatedAt]: "Обновлено",
 	[Key.license]: "Лицензия",
+	[Key.sourceCode]: "Посмотреть исходный код",
 	[Key.bangumi]: "Бангуми",
 
 	// Фильтр и статус Бангуми текст

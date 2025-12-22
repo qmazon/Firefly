@@ -49,7 +49,9 @@ export const zh_CN: Translation = {
 
 	[Key.author]: "作者",
 	[Key.publishedAt]: "发布于",
+	[Key.updatedAt]: "更新于",
 	[Key.license]: "许可协议",
+	[Key.sourceCode]: "查看源码",
 	[Key.bangumi]: "番组计划",
 
 	// 番组计划筛选和状态文本
@@ -184,8 +186,8 @@ export const zh_CN: Translation = {
 	[Key.sponsorAnonymous]: "匿名",
 	[Key.scanToSponsor]: "扫码赞助",
 	[Key.sponsorGoTo]: "前往赞助",
-	[Key.sponsorButton]: "赞助支持",
-	[Key.sponsorButtonText]: "如果这篇文章对你有帮助，欢迎赞助支持！",
+	[Key.sponsorButton]: "支持与分享",
+	[Key.sponsorButtonText]: "如果这篇文章对你有帮助，不妨赞助一下？或者，划到评论区点个赞！",
 
 	// 站点统计
 	[Key.siteStats]: "站点统计",

@@ -51,7 +51,9 @@ export const en: Translation = {
 
 	[Key.author]: "Author",
 	[Key.publishedAt]: "Published at",
+	[Key.updatedAt]: "Updated at",
 	[Key.license]: "License",
+	[Key.sourceCode]: "View Source",
 	[Key.bangumi]: "Bangumi",
 
 	// Bangumi Filter and Status Text
