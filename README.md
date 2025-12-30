@@ -15,9 +15,21 @@
 > 
 > ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-5.16.5-orange)
-![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+![Astro](https://img.shields.io/badge/Astro-5.16.6-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
+>
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> 
+> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
+[![爱发电赞助](https://img.shields.io/badge/爱发电-赞助作者-ff69b4.svg)](https://afdian.com/a/cuteleaf)
+> 
 </div>
+
+
+
 
 
 ---
@@ -83,6 +95,7 @@
 - [x] **站点统计** - 显示文章、分类、标签数目、文章总字数、运行时长、最后更新时间
 - [x] **站点日历** - 显示当月日历，以及当月的发布文章
 - [x] **赞助页面** - 多种支付方式、收款码展示、赞助者列表、文章内赞助按钮
+- [x] **分享海报** - 支持生成精美的文章分享海报，包含文章摘要、二维码等信息
 - [x] **樱花特效** - 支持樱花特效，全屏樱花效果
 - [x] **友情链接** - 精美的友链展示卡片
 - [x] **广告组件** - 支持自定义侧边栏广告内容
@@ -119,8 +132,8 @@
 
 ### 环境要求
 
-- Node.js ≤ 22
-- pnpm ≤ 9
+- Node.js ≤ 25
+- pnpm ≤ 10
 
 ### 本地开发部署
 

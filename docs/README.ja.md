@@ -8,8 +8,16 @@
 > 
 > ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-5.16.5-orange)
-![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+![Astro](https://img.shields.io/badge/Astro-5.16.6-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
+>
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> 
+> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
+[![Afdian Sponsor](https://img.shields.io/badge/Afdian-作者を支援-ff69b4.svg)](https://afdian.com/a/cuteleaf)
 </div>
 
 
@@ -67,6 +75,7 @@
 - [x] **サイト統計** - 記事、カテゴリ、タグ数、総文字数、稼働時間、最終更新時刻を表示
 - [x] **サイトカレンダー** - 今月のカレンダーと今月公開された記事を表示
 - [x] **スポンサーページ** - 複数の支払い方法、支払いQRコード、スポンサーリスト、記事内スポンサーボタン
+- [x] **シェアポスター** - 記事の要約やQRコードなどを含む美しい記事シェアポスターの生成をサポート
 - [x] **桜エフェクト** - 桜エフェクトをサポート、フルスクリーン桜アニメーション
 - [x] **友人リンク** - 美しい友人リンク表示カード
 - [x] **広告コンポーネント** - カスタムサイドバー広告コンテンツをサポート

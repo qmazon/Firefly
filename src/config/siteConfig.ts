@@ -63,6 +63,9 @@ export const siteConfig: SiteConfig = {
 	// 文章页底部的"上次编辑时间"卡片开关
 	showLastModified: true,
 
+	// 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
+	outdatedThreshold: 30,
+
 	// OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
 	generateOgImages: false,
 
@@ -92,7 +95,7 @@ export const siteConfig: SiteConfig = {
 	// 分页配置
 	pagination: {
 		// 每页显示的文章数量
-		postsPerPage: 8,
+		postsPerPage: 10,
 	},
 
 	backgroundWallpaper: {

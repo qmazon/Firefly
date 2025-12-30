@@ -6,6 +6,12 @@ export const zh_CN: Translation = {
 	[Key.about]: "关于我",
 	[Key.archive]: "归档",
 	[Key.search]: "搜索",
+	[Key.searchNoResults]: "找不到相关结果。",
+	[Key.searchTypeSomething]: "请输入搜索关键词。",
+	[Key.searchLoading]: "正在搜索...",
+	[Key.searchSummary]: "摘要",
+	[Key.searchContent]: "内容",
+	[Key.searchViewMore]: "查看更多结果 ({count} 个更多)",
 	[Key.other]: "其他",
 
 	[Key.tags]: "标签",
@@ -188,6 +194,8 @@ export const zh_CN: Translation = {
 	[Key.sponsorGoTo]: "前往赞助",
 	[Key.sponsorButton]: "支持与分享",
 	[Key.sponsorButtonText]: "如果这篇文章对你有帮助，不妨赞助一下？或者，划到评论区点个赞！",
+	[Key.shareOnSocial]: "分享",
+	[Key.shareOnSocialDescription]: "如果这篇文章对你有帮助，欢迎分享给更多人！",
 
 	// 站点统计
 	[Key.siteStats]: "站点统计",
@@ -220,4 +228,11 @@ export const zh_CN: Translation = {
 	[Key.calendarOctober]: "10月",
 	[Key.calendarNovember]: "11月",
 	[Key.calendarDecember]: "12月",
+
+	[Key.shareArticle]: "分享",
+	[Key.generatingPoster]: "海报生成中...",
+	[Key.copied]: "已复制",
+	[Key.copyLink]: "复制链接",
+	[Key.savePoster]: "保存海报",
+	[Key.scanToRead]: "扫码阅读文章",
 };

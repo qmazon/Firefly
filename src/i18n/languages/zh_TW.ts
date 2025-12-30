@@ -6,6 +6,12 @@ export const zh_TW: Translation = {
 	[Key.about]: "關於我",
 	[Key.archive]: "歸檔",
 	[Key.search]: "搜尋",
+	[Key.searchNoResults]: "找不到相關結果。",
+	[Key.searchTypeSomething]: "請輸入搜尋關鍵字。",
+	[Key.searchLoading]: "搜尋中...",
+	[Key.searchSummary]: "摘要",
+	[Key.searchContent]: "內容",
+	[Key.searchViewMore]: "查看更多結果 ({count} 個更多)",
 	[Key.other]: "其他",
 
 	[Key.tags]: "標籤",
@@ -188,8 +194,12 @@ export const zh_TW: Translation = {
 	[Key.sponsorAnonymous]: "匿名",
 	[Key.scanToSponsor]: "掃碼贊助",
 	[Key.sponsorGoTo]: "前往贊助",
-	[Key.sponsorButton]: "贊助支持",
-	[Key.sponsorButtonText]: "如果這篇文章對你有幫助，歡迎贊助支持！",
+	[Key.sponsorButton]: "支持與分享",
+	[Key.sponsorButtonText]:
+		"如果這篇文章對你有幫助，歡迎分享給更多人或贊助支持！",
+
+	[Key.shareOnSocial]: "分享",
+	[Key.shareOnSocialDescription]: "如果這篇文章對你有幫助，歡迎分享給更多人！",
 
 	// 站點統計
 	[Key.siteStats]: "站點統計",
@@ -222,4 +232,11 @@ export const zh_TW: Translation = {
 	[Key.calendarOctober]: "10月",
 	[Key.calendarNovember]: "11月",
 	[Key.calendarDecember]: "12月",
+
+	[Key.shareArticle]: "分享",
+	[Key.generatingPoster]: "海報生成中...",
+	[Key.copied]: "已複製",
+	[Key.copyLink]: "複製連結",
+	[Key.savePoster]: "保存海報",
+	[Key.scanToRead]: "掃碼閱讀文章",
 };

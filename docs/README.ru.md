@@ -8,8 +8,16 @@
 > 
 > ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-5.16.5-orange)
-![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+![Astro](https://img.shields.io/badge/Astro-5.16.6-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
+>
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> 
+> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
+[![Afdian Sponsor](https://img.shields.io/badge/Afdian-Поддержать%20автора-ff69b4.svg)](https://afdian.com/a/cuteleaf)
 </div>
 
 
@@ -67,6 +75,7 @@
 - [x] **Статистика сайта** - Отображение количества статей, категорий, тегов, общего количества слов, времени работы, времени последнего обновления
 - [x] **Календарь сайта** - Отображение календаря текущего месяца и опубликованных статей за месяц
 - [x] **Страница спонсоров** - Несколько способов оплаты, QR-коды для платежей, список спонсоров, кнопка спонсорства в статьях
+- [x] **Постер для публикации** - Поддержка создания красивых постеров для публикации статей, содержащих краткое содержание статьи, QR-код и т.д.
 - [x] **Эффект сакуры** - Поддержка эффекта сакуры, полноэкранная анимация сакуры
 - [x] **Дружественные ссылки** - Красивые карточки отображения дружественных ссылок
 - [x] **Рекламный компонент** - Поддержка пользовательского рекламного контента на боковой панели

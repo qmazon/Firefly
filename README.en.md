@@ -8,8 +8,16 @@
 > 
 > ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-5.16.5-orange)
-![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+![Astro](https://img.shields.io/badge/Astro-5.16.6-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
+>
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> 
+> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
+[![Afdian Sponsor](https://img.shields.io/badge/Afdian-Sponsor%20Author-ff69b4.svg)](https://afdian.com/a/cuteleaf)
 </div>
 
 
@@ -67,6 +75,7 @@
 - [x] **Site Statistics** - Displays article, category, tag counts, total word count, running time, last update time
 - [x] **Site Calendar** - Displays current month calendar and published articles for the month
 - [x] **Sponsor Page** - Multiple payment methods, payment QR codes, sponsor list, in-article sponsor button
+- [x] **Share Poster** - Supports generating beautiful article share posters containing article summary, QR code, etc.
 - [x] **Sakura Effect** - Supports sakura effect, fullscreen sakura animation
 - [x] **Friend Links** - Beautiful friend link display cards
 - [x] **Ad Component** - Supports custom sidebar advertising content
