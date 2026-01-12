@@ -5,13 +5,15 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	mode: "banner",
 	// 是否允许用户通过导航栏切换壁纸模式，设为false可提升性能（只渲染当前模式）
 	switchable: true,
+
 	// 背景图片配置
 	src: {
 		// 桌面背景图片
-		desktop: "/assets/images/d1.webp",
+		desktop: "/assets/images/d1.png",
 		// 移动背景图片
-		mobile: "/assets/images/m1.webp",
+		mobile: "/assets/images/m3.webp",
 	},
+
 	// Banner模式特有配置
 	banner: {
 		// 图片位置
@@ -19,85 +21,66 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 如果不知道怎么配置百分百之类的配置，推荐直接使用：'center'居中，'top'顶部居中，'bottom' 底部居中，'left'左侧居中，'right'右侧居中
 		position: "0% 20%",
 
-		// 主页横幅文字
 		homeText: {
-			// 是否启用主页横幅文字
+			// 主页显示自定义文本（全局开关）
 			enable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
-			// 主页横幅主标题字体大小
-			titleSize: "3.8rem",
+			title: "雪纷飞的博客",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"五月降霜，六月飞雪",
+				"风起，云涌，雷动",
+				"愿你我皆能在风雪中前行",
 			],
-			// 主页横幅副标题字体大小
-			subtitleSize: "1.5rem",
 			typewriter: {
-				// 是否启用打字机效果
-				// 打字机开启 → 循环显示所有副标题
-				// 打字机关闭 → 每次刷新随机显示一条副标题
-				enable: true,
-				// 打字速度（毫秒）
-				speed: 100,
-				// 删除速度（毫秒）
-				deleteSpeed: 50,
-				// 完全显示后的暂停时间（毫秒）
-				pauseTime: 2000,
+				//打字机开启 → 循环显示所有副标题
+				//打字机关闭 → 每次刷新随机显示一条副标题
+				enable: false, // 启用副标题打字机效果
+				speed: 100, // 打字速度（毫秒）
+				deleteSpeed: 50, // 删除速度（毫秒）
+				pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
 			},
 		},
-		// 图片来源
 		credit: {
 			enable: {
-				// 桌面端显示横幅图片来源文本
-				desktop: true,
-				// 移动端显示横幅图片来源文本
-				mobile: true,
+				desktop: true, // 桌面端显示横幅图片来源文本
+				mobile: true, // 移动端显示横幅图片来源文本
 			},
 			text: {
-				// 桌面端要显示的来源文本
-				desktop: "Pixiv - 晚晚喵",
-				// 移动端要显示的来源文本
-				mobile: "Pixiv - KiraraShss",
+				desktop: "Bilibili - 龙族", // 桌面端要显示的来源文本
+				mobile: "Pixiv - KiraraShss", // 移动端要显示的来源文本
 			},
 			url: {
-				// 桌面端原始艺术品或艺术家页面的 URL 链接
-				desktop: "https://www.pixiv.net/artworks/135490046",
-				// 移动端原始艺术品或艺术家页面的 URL 链接
-				mobile: "https://www.pixiv.net/users/42715864",
+				desktop: "https://www.bilibili.com/video/BV1ziWneGEpx/", // 桌面端原始艺术品或艺术家页面的 URL 链接
+				mobile: "https://www.pixiv.net/users/42715864", // 移动端原始艺术品或艺术家页面的 URL 链接
 			},
 		},
-		// 横幅导航栏配置
 		navbar: {
-			// 横幅导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
-			transparentMode: "semifull",
-			// 是否开启毛玻璃模糊效果，开启后可能会影响性能，导致网站变卡顿，如果不开启则是半透明
-			enableBlur: false,
-			// 毛玻璃模糊度
-			blur: 3,
+			transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
 		},
 		// 波浪动画效果配置，开启可能会影响页面性能，请根据实际情况开启
 		waves: {
 			enable: {
-				// 桌面端是否启用波浪动画效果
-				desktop: true,
-				// 移动端是否启用波浪动画效果
-				mobile: true,
+				desktop: true, // 桌面端启用波浪动画效果
+				mobile: true, // 移动端启用波浪动画效果
 			},
+			// performance: {
+			// 	quality: "high",
+			// 	hardwareAcceleration: true, // 是否启用硬件加速
+			// },
+			// 性能优化说明：
+			// quality: "high" - 最佳视觉效果，但GPU占用较高，适合高性能设备
+			// quality: "medium" - 平衡性能和质量，适合中等性能设备
+			// quality: "low" - 最低GPU占用，动画更简单，适合低性能设备
+			// hardwareAcceleration: true - 启用GPU加速，提升性能但增加GPU占用
+			// hardwareAcceleration: false - 禁用GPU加速，降低GPU占用但可能影响性能
 		},
 	},
+
 	// 全屏透明覆盖模式特有配置
 	overlay: {
-		// 层级，确保壁纸在背景层
-		zIndex: -1,
-		// 壁纸透明度
-		opacity: 0.8,
-		// 背景模糊程度
-		blur: 2,
+		zIndex: -1, // 层级，确保壁纸在背景层
+		opacity: 0.8, // 壁纸透明度
+		blur: 1, // 背景模糊程度
 	},
-};
+}
