@@ -14,13 +14,12 @@ import katex from "katex";
 import "katex/dist/contrib/mhchem.mjs"; // 加载 mhchem 扩展
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive"; /* Handle directives */
-import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
+import rehypeCallouts from "rehype-callouts";
 import remarkSectionize from "remark-sectionize";
 import { expressiveCodeConfig, siteConfig } from "./src/config";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
-import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
-import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
+// import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
 import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.mjs";
 import { rehypeMermaid } from "./src/plugins/rehype-mermaid.mjs";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
@@ -28,7 +27,6 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import mdx from "@astrojs/mdx";
-import searchIndexer from "./src/integrations/searchIndex.mts";
 import rehypeEmailProtection from "./src/plugins/rehype-email-protection.mjs";
 import rehypeFigure from "./src/plugins/rehype-figure.mjs";
 import netlify from "@astrojs/netlify";
@@ -47,10 +45,10 @@ export default defineConfig({
             animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
             // the default value `transition-` cause transition delay
             // when the Tailwind class `transition-all` is used
-            containers: ["main"],
+            containers: ["main", "#right-sidebar-dynamic", "#floating-toc-wrapper"],
             smoothScrolling: false,
             cache: true,
-            preload: false,
+            preload: true,
             accessibility: true,
             updateHead: true,
             updateBodyClass: false,
@@ -74,141 +72,139 @@ export default defineConfig({
         }),
         expressiveCode({
             themes: [expressiveCodeConfig.darkTheme, expressiveCodeConfig.lightTheme],
-            useDarkModeMediaQuery: false,
-            themeCssSelector: (theme) => `[data-theme='${theme.name}']`,
-            plugins: [
-                pluginCollapsibleSections(),
-                pluginLineNumbers(),
-                // pluginLanguageBadge(),
-                pluginCustomCopyButton(),
-            ],
-            defaultProps: {
-                wrap: false,
-                overridesByLang: {
-                    shellsession: {
-                        showLineNumbers: false,
-                    },
-                },
-            },
-            styleOverrides: {
-                borderRadius: "0.75rem",
-                codeFontSize: "0.875rem",
-                codeFontFamily:
-                    "'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-                codeLineHeight: "1.5rem",
-                frames: {},
-                textMarkers: {
-                    delHue: 0,
-                    insHue: 180,
-                    markHue: 250,
-                },
-            },
-            frames: {
-                showCopyToClipboardButton: false,
-            },
-        }),
-        svelte(),
-        sitemap({
-            filter: (page) => {
-                // 根据页面开关配置过滤sitemap
-                const url = new URL(page);
-                const pathname = url.pathname;
+            sitemap({
+                filter: (page) => {
+                    // 根据页面开关配置过滤sitemap
+                    const url = new URL(page);
+                    const pathname = url.pathname;
 
-                if (pathname === "/sponsor/" && !siteConfig.pages.sponsor) {
-                    return false;
-                }
-                if (pathname === "/guestbook/" && !siteConfig.pages.guestbook) {
-                    return false;
-                }
-                if (pathname === "/bangumi/" && !siteConfig.pages.bangumi) {
-                    return false;
-                }
-
-                return true;
-            },
-        }),
-        searchIndexer(),
-        mdx(),
-    ],
-    markdown: {
-        remarkPlugins: [
-            remarkMath,
-            remarkReadingTime,
-            remarkExcerpt,
-            remarkGithubAdmonitionsToDirectives,
-            remarkDirective,
-            remarkSectionize,
-            parseDirectiveNode,
-            remarkMermaid,
-        ],
-        rehypePlugins: [
-            [rehypeKatex, { katex }],
-            rehypeSlug,
-            rehypeMermaid,
-            rehypeFigure,
-            [rehypeEmailProtection, { method: "base64" }], // 邮箱保护插件，支持 'base64' 或 'rot13'
-            [
-                rehypeComponents,
-                {
-                    components: {
-                        github: GithubCardComponent,
-                        note: (x, y) => AdmonitionComponent(x, y, "note"),
-                        tip: (x, y) => AdmonitionComponent(x, y, "tip"),
-                        important: (x, y) => AdmonitionComponent(x, y, "important"),
-                        caution: (x, y) => AdmonitionComponent(x, y, "caution"),
-                        warning: (x, y) => AdmonitionComponent(x, y, "warning"),
-                    },
-                },
-            ],
-            [
-                rehypeAutolinkHeadings,
-                {
-                    behavior: "append",
-                    properties: {
-                        className: ["anchor"],
-                    },
-                    content: {
-                        type: "element",
-                        tagName: "span",
-                        properties: {
-                            className: ["anchor-icon"],
-                            "data-pagefind-ignore": true,
-                        },
-                        children: [
-                            {
-                                type: "text",
-                                value: "#",
-                            },
-                        ],
-                    },
-                },
-            ],
-        ],
-    },
-    vite: {
-        resolve: {
-            conditions: ["module", "browser", "development|production", "default"],
-        },
-        ssr: {
-            resolve: {
-                // Allow packages that only expose a `default` export condition (e.g. Svelte SSR entry)
-                conditions: ["module", "node", "development|production", "default"],
-            },
-        },
-        build: {
-            rollupOptions: {
-                onwarn(warning, warn) {
-                    // temporarily suppress this warning
-                    if (
-                        warning.message.includes("is dynamically imported by") &&
-                        warning.message.includes("but also statically imported by")
-                    ) {
-                        return;
+                    if (pathname === "/sponsor/" && !siteConfig.pages.sponsor) {
+                        return false;
                     }
-                    warn(warning);
+                    if (pathname === "/guestbook/" && !siteConfig.pages.guestbook) {
+                        return false;
+                    }
+                    if (pathname === "/bangumi/" && !siteConfig.pages.bangumi) {
+                        return false;
+                    }
+
+                    return true;
+                },
+            }),
+            mdx(),
+        ],
+        markdown: {
+            remarkPlugins: [
+                remarkMath,
+                remarkReadingTime,
+                remarkExcerpt,
+                remarkDirective,
+                remarkSectionize,
+                parseDirectiveNode,
+                remarkMermaid,
+            ],
+            rehypePlugins: [
+                [rehypeKatex, { katex }],
+                [rehypeCallouts, { theme: siteConfig.rehypeCallouts.theme }],
+                rehypeSlug,
+                rehypeMermaid,
+                rehypeFigure,
+                [rehypeEmailProtection, { method: "base64" }], // 邮箱保护插件，支持 'base64' 或 'rot13'
+                [
+                    rehypeComponents,
+                    {
+                        components: {
+                            github: GithubCardComponent,
+                        },
+                    },
+                ],
+                [
+                    rehypeAutolinkHeadings,
+                    {
+                        behavior: "append",
+                        properties: {
+                            className: ["anchor"],
+                        },
+                        content: {
+                            type: "element",
+                            tagName: "span",
+                            properties: {
+                                className: ["anchor-icon"],
+                                "data-pagefind-ignore": true,
+                            },
+                            children: [
+                                {
+                                    type: "text",
+                                    value: "#",
+                                },
+                            ],
+                        },
+                    },
+                ],
+            ],
+        },
+        vite: {
+            resolve: {
+                alias: {
+                    "@rehype-callouts-theme": `rehype-callouts/theme/${siteConfig.rehypeCallouts.theme}`,
+                },
+                conditions: ["module", "browser", "development|production", "default"],
+            },
+            ssr: {
+                resolve: {
+                    // Allow packages that only expose a `default` export condition (e.g. Svelte SSR entry)
+                    conditions: ["module", "node", "development|production", "default"],
+                },
+            },
+            build: {
+                rollupOptions: {
+                    onwarn(warning, warn) {
+                        // temporarily suppress this warning
+                        if (
+                            warning.message.includes("is dynamically imported by") &&
+                            warning.message.includes("but also statically imported by")
+                        ) {
+                            return;
+                        }
+                        warn(warning);
+                    },
                 },
             },
         },
-    },
-    adapter: netlify(),
+        adapter: netlify(),
+							"data-pagefind-ignore": true,
+						},
+						children: [
+							{
+								type: "text",
+								value: "#",
+							},
+						],
+					},
+				},
+			],
+		],
+	},
+	vite: {
+		resolve: {
+			alias: {
+				"@rehype-callouts-theme": `rehype-callouts/theme/${siteConfig.rehypeCallouts.theme}`,
+			},
+		},
+		build: {
+			rollupOptions: {
+				onwarn(warning, warn) {
+					// temporarily suppress this warning
+					if (
+						warning.message.includes("is dynamically imported by") &&
+						warning.message.includes("but also statically imported by")
+					) {
+						return;
+					}
+					warn(warning);
+				},
+			},
+		},
+	},
+>>>>>>> upstream-sync
 });
